@@ -14,7 +14,7 @@ def lcdCallBack(client, userdata, message):
 def ledCallBack(client, userdata, message):
 
     led = 2
-    gloabl state
+    global state
     msg = str(message.payload, "utf-8")
     if msg == "LED_toggle":
         if state == 0:
