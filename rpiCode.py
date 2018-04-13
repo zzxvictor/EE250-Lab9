@@ -15,7 +15,7 @@ def ledCallBack(client, userdata, message):
     led = 2
     global state
     msg = str(message.payload, "utf-8")
-    print msg
+    print (msg)
     if msg == "LED_toggle":
         if state == 0:
             grovepi.digitalWrite(led, 1)
