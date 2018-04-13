@@ -7,7 +7,6 @@ import time
 import grovepi
 import grove_rgb_lcd 
 
-state = 0
 def lcdCallBack(client, userdata, message):
    grove_rgb_lcd.setText(str(message.payload,"utf-8"))
 
@@ -16,6 +15,7 @@ def ledCallBack(client, userdata, message):
     led = 2
     global state
     msg = str(message.payload, "utf-8")
+    print msg
     if msg == "LED_toggle":
         if state == 0:
             grovepi.digitalWrite(led, 1)
