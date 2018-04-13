@@ -7,6 +7,7 @@ import time
 import grovepi
 import grove_rgb_lcd 
 
+state = 0
 def lcdCallBack(client, userdata, message):
    grove_rgb_lcd.setText(str(message.payload,"utf-8"))
 
