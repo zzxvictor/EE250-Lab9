@@ -20,10 +20,10 @@ def ledCallBack(client, userdata, message):
     if msg == "LED_toggle":
         if state == 0:
             grovepi.digitalWrite(led, 1)
-            state == 1
+            state = 1
         elif state == 1:
             grovepi.digitalWrite(led, 0)
-            state == 0
+            state = 0
         else:
             state = state
 
